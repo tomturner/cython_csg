@@ -335,7 +335,8 @@ class Polygon(object):
                 vert.normal = newVector(vert.normal)
 
     def toXYZ(self):
-        return map(list, zip(*[(vert.pos.x, vert.pos.y, vert.pos.z) for vert in self.vertices]))
+        x, y, z =  map(list, zip(*[(vert.pos.x, vert.pos.y, vert.pos.z) for vert in self.vertices]))
+        return x, y, z
 
     def __repr__(self):
         return reduce(lambda x, y: x + y,
